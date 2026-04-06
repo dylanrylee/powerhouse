@@ -2,7 +2,7 @@ import Header from './components/Header.tsx'
 import Hero from './components/Hero.tsx'
 import Services from './components/Services.tsx'
 import BasementShowcase from './components/BasementShowcase.tsx'
-import Gallery from './components/Gallery.tsx'
+import ProjectsTour from './components/Gallery.tsx'
 import CTA from './components/CTA.tsx'
 import Footer from './components/Footer.tsx'
 
@@ -14,7 +14,7 @@ function App() {
         <Hero />
         <Services />
         <BasementShowcase />
-        <Gallery />
+        <ProjectsTour />
         <CTA />
       </main>
       <Footer />

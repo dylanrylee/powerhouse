@@ -5,3 +5,83 @@
     text-wrap: balance;
   }
 }
+
+/* ── Global smooth scroll ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Scroll-reveal base state ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.reveal--left {
+  transform: translateX(-40px);
+}
+.reveal.reveal--right {
+  transform: translateX(40px);
+}
+.reveal.reveal--scale {
+  transform: scale(0.93) translateY(20px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* staggered children */
+.reveal-group > * {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-group.is-visible > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0ms;   }
+.reveal-group.is-visible > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 100ms; }
+.reveal-group.is-visible > *:nth-child(3) { opacity: 1; transform: none; transition-delay: 200ms; }
+.reveal-group.is-visible > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 300ms; }
+.reveal-group.is-visible > *:nth-child(5) { opacity: 1; transform: none; transition-delay: 400ms; }
+.reveal-group.is-visible > *:nth-child(6) { opacity: 1; transform: none; transition-delay: 500ms; }
+.reveal-group.is-visible > *:nth-child(7) { opacity: 1; transform: none; transition-delay: 600ms; }
+.reveal-group.is-visible > *:nth-child(8) { opacity: 1; transform: none; transition-delay: 700ms; }
+.reveal-group.is-visible > *:nth-child(9) { opacity: 1; transform: none; transition-delay: 800ms; }
+
+/* ── Floating badge pulse ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+.animate-float {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+/* ── Shimmer line ── */
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.15) 50%,
+    transparent 100%
+  );
+  animation: shimmer 2.4s ease-in-out infinite;
+}
+
+/* ── Ticker / ambient line ── */
+@keyframes slide-x {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-slide-x {
+  animation: slide-x 22s linear infinite;
+}
