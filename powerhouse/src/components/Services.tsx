@@ -69,7 +69,7 @@ export default function Services() {
   const gridRef    = useReveal<HTMLDivElement>(0.1)
 
   return (
-    <section className="py-24 bg-white">
+    <section id="services" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div ref={headingRef} className="reveal text-center mb-16">
@@ -99,12 +99,7 @@ export default function Services() {
               <p className="text-sm font-light leading-relaxed text-slate-600 mb-4">
                 {service.description}
               </p>
-              <div className="inline-flex items-center text-xs font-semibold uppercase tracking-widest text-slate-900 group-hover:text-amber-700 transition-colors duration-300">
-                Learn More{' '}
-                <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </div>
+
             </div>
           ))}
         </div>

@@ -18,7 +18,7 @@ export default function BasementShowcase() {
   const gridRef    = useReveal<HTMLDivElement>(0.05)
 
   return (
-    <section className="py-24 bg-slate-50 border-y border-slate-100">
+    <section id="gallery" className="py-24 bg-slate-50 border-y border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div ref={headingRef} className="reveal text-center mb-16">

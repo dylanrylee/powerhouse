@@ -5,7 +5,7 @@ export default function CTA() {
   const formRef    = useReveal<HTMLFormElement>(0.1)
 
   return (
-    <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <section id="contact" className="py-24 bg-slate-900 text-white relative overflow-hidden">
       {/* Animated ambient blobs */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-slate-800 rounded-full blur-3xl opacity-50 translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div

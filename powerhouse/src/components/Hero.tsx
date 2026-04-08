@@ -18,7 +18,7 @@ export default function Hero() {
   const contentRef = useReveal<HTMLDivElement>(0)
 
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with parallax */}
       <div className="absolute inset-0 z-0">
         <img
@@ -45,11 +45,7 @@ export default function Hero() {
         <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto text-balance font-light leading-relaxed">
           From stunning kitchen remodels to complete structural makeovers, we bring precision, elegance, and quality to every corner of your house.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="relative overflow-hidden shimmer w-full sm:w-auto bg-white text-slate-900 px-8 py-4 rounded-none text-xs uppercase tracking-widest font-semibold hover:bg-amber-50 transition-colors shadow-lg">
-            Get a Free Estimate
-          </button>
-        </div>
+
       </div>
 
       {/* Scroll indicator */}
